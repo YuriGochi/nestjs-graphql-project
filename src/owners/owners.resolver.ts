@@ -10,7 +10,7 @@ export class OwnersResolver {
 
   @Mutation(() => Owner)
   createOwner(@Args('createOwnerInput') createOwnerInput: CreateOwnerInput) {
-    return this.ownersService.create(createOwnerInput);
+    return this.ownersService.createOwner(createOwnerInput);
   }
 
   @Query(() => [Owner], { name: 'owners' })
